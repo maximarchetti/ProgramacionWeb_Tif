@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "b6430d1d-2af9-4ae8-9c49-88d6793435bc",
+		"name": "TIF_Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45552316"
+	},
+	"item": [
+		{
+			"name": "Medios De Pago",
+			"item": [
+				{
+					"name": "traerMediosDePago",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medios-de-pago/traer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medios-de-pago",
+								"traer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarMedioDePago",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Efectivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medios-de-pago/editar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medios-de-pago",
+								"editar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearMedioDePago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Tarjeta VISA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medios-de-pago/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medios-de-pago",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarMedioDePago",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medios-de-pago/borrar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medios-de-pago",
+								"borrar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerMedioDePagoPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medios-de-pago/traer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medios-de-pago",
+								"traer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pago",
+			"item": [
+				{
+					"name": "Traer todos los pagos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagos/traer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagos",
+								"traer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerPagoPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagos/traer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagos",
+								"traer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generarPago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"totalPago\": 12000,\r\n  \"fechaPago\": \"2025-12-01\",\r\n  \"idMedioDePago\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagos/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Pago",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagos/borrar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagos",
+								"borrar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar Pago",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"totalPago\": 12000,\r\n  \"fechaPago\": \"2013-12-01\",\r\n  \"idMedioDePago\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagos/editar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagos",
+								"editar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Factura",
+			"item": [
+				{
+					"name": "Traer Todas las facturas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/facturas/traer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"traer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Factura por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/facturas/traer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"traer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generarFacturas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fechaEmision\": \"2025-11-30\",\r\n  \"idPago\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/facturas/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarFactura",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fechaEmision\": \"2023-11-24\",\r\n  \"idPago\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/facturas/editar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"editar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
